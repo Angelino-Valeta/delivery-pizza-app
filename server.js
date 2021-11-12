@@ -6,8 +6,10 @@ app.use(express.json());
 
 // Routas
 const pizzaRoute = require("./routes/pizzasRoute");
+const userRoute = require("./routes/userRoute");
 
 app.use("/api/pizzas/", pizzaRoute);
+app.use("/api/users", userRoute);
 
 app.get("/", (req, res) => {
   res.send("Welcome");
