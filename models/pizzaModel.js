@@ -9,9 +9,9 @@ const pizzaSchema = mongoose.Schema(
     image: { type: String, require },
     description: { type: String },
   },
-  {timestamps: true}
+  { timestamps: true }
 );
 
-const pizzaModel = mongoose.model('pizzas', pizzaSchema);
+const pizzaModel = mongoose.model("pizzas", pizzaSchema);
 
 module.exports = pizzaModel;
