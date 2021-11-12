@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Angelino-Valeta/delivery-pizza-app#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^6.0.12",
     "nodemon": "^2.0.15"
   }
 }
