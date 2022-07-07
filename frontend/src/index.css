@@ -31,3 +31,18 @@ h1{
 .flex-container{
   display: flex !important;
 }
+
+.btn-p{
+  background-color: blue !important;
+  color: white !important;
+}
+
+.btn-s{
+  background-color: red !important;
+  color: white !important;
+}
+
+select{
+  box-shadow: none;
+  border-color: black !important;
+}
