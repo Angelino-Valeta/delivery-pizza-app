@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const Pizza = require("../models/pizzaModel");
+const Pizza = require("./../models/pizzaModel");
 
-router.get("/getAllPizzas", async (req, res) => {
+router.get("/", async (req, res) => {
+
   try {
-		
-	const pizzas = await Pizza.find();
-
-	res.status(200).json({
-		data: pizzas
-	})
-     
+    const pizzas = await Pizza.find();
+    res.status(200).json({
+      message: "Success",
+      data: pizzas,
+    });
   } catch (error) {
     return res.status(400).json({
       message: error,
