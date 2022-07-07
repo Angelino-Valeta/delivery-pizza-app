@@ -1,20 +1,21 @@
-const express = require("express");
-const db = require("./db");
-
+const express = require('express');
+const db = require('./db');
 const app = express();
+
+// Import rotas
+const pizzaRouter = require('./routes/pizzasRoute');
+
+
+
 app.use(express.json());
 
-// Routas
-const pizzaRoute = require("./routes/pizzasRoute");
-const userRoute = require("./routes/userRoute");
 
-app.use("/api/pizzas/", pizzaRoute);
-app.use("/api/users", userRoute);
+app.use('/api/v1/pizzas', pizzaRouter);
 
-app.get("/", (req, res) => {
-  res.send("Welcome");
+app.get('/', (req, res) => {
+  res.send('Welcome!!!!')
 });
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT  || 5000;
 
-app.listen(port, () => console.log("Server Work " + port));
+app.listen(PORT, () => console.log('Server work! ', PORT));
