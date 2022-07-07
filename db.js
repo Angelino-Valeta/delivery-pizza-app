@@ -1,20 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const url = 'mongodb://localhost:27017/mern-pizza';
+const url = "mongodb://localhost:27017/mern-pizza";
 
 mongoose.connect(url, {
   useUnifiedTopology: true,
-  useNewUrlParser: true
+  useNewUrlParser: true,
 });
 
 const db = mongoose.connection;
 
-db.on('connected', () => {
-  console.log('Mongo DB Conneted');
+db.on("connected", () => {
+  console.log("Mongo DB Connection Successfull!!");
 });
 
-db.on('error', () => {
-  console.log('Error, on connection with mongo db');
+db.on("error", () => {
+  console.log("Mongo DB Connection failed ");
 });
 
-module.export = mongoose
+module.exports = mongoose;
