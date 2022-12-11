@@ -1,2 +1,2 @@
 # delivery-pizza-app
-Pizza Delivery App
+Pizza Delivery App with React.js and Nodejs + Mongodb
